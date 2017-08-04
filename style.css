@@ -1,3 +1,81 @@
-﻿body
-{
+﻿@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,900);
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif !important;
+    font-size: 13pt !important;
+    font-weight: 300 !important;
+}
+
+.container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+#pageContent, section {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+/*colors not permenent*/
+#home {
+    background-color: #00B274;
+}
+
+#portfolio {
+    background-color: #d2685b;
+}
+
+#aboutMe {
+    background-color: #0096D6;
+}
+
+#contact {
+    background-color: #E9AC40;
+}
+
+footer {
+    background-color: #31353A;
+    color: #FFF;
+    font-size: 10pt !important;
+    padding: 20px;
+}
+
+#rightFoot {
+    float: right;
+}
+
+.navbar {
+    opacity: 0.9;
+    filter: Alpha(opacity=90); /* IE8 and earlier */
+}
+
+.myLogo {
+    /*max-height: 20px;*/
+    /*height: 100%;*/
+    /*width: 100px;*/
+    font-family: 'Lato', sans-serif;
+    /*border: solid yellow 1px;*/
+}
+
+    .myLogo span, .myLogo:hover{
+        color: #F05557 !important;
+        font-weight: normal;
+    }
+
+    /*may take out hover property later on*/
+    .navbar .active a, .nav a:focus, .nav a:hover {
+        color: #F05557 !important;
+        background-color: transparent !important;
+    }
+
+footer {
+    background-color: #31353A;
+    color: #FFF;
+    font-size: 10pt !important;
+    padding: 20px;
 }
