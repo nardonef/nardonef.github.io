@@ -59,15 +59,13 @@ footer {
     /*height: 100%;*/
     /*width: 100px;*/
     font-family: 'Lato', sans-serif;
-    /*border: solid yellow 1px;*/
 }
-
+    /*may take out hover property later on, on Frank*/
     .myLogo span, .myLogo:hover{
         color: #F05557 !important;
         font-weight: normal;
     }
 
-    /*may take out hover property later on*/
     .navbar .active a, .nav a:focus, .nav a:hover {
         color: #F05557 !important;
         background-color: transparent !important;
@@ -78,4 +76,39 @@ footer {
     color: #FFF;
     font-size: 10pt !important;
     padding: 20px;
+}
+
+/* Menu, makes tranformation smooth */
+.navbar-nav a::before, .navbar-nav a::after {
+    display: inline-block;
+    opacity: 0; /* makes [] invisible before and after hover*/
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+
+
+.navbar-nav a::before {
+    margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.navbar-nav a::after {
+    margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);
+}
+
+/* makes hover over links transform work while actively hovered over a link */
+.navbar-nav a:hover, .navbar-nav a:hover::before, .navbar-nav a:hover::after, .navbar-nav a:focus::before, .navbar-nav a:focus::after {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);
 }
